@@ -1,0 +1,70 @@
+<div class="container-fluid px-5 bg-dark-subtle">
+    <h1 class="pt-3 text-center">Texto para curriculo</h1>
+    <h2 class="pt-3 text-center">Descreva o seu curriculo para poder gerar um template com as informações</h2>
+    <h3 class="pt-3">Exemplo</h3>
+    <p>Informações: Clodowaldo Oswaldo Nelson, (11) 912345678, Rua Imaginária 102, Bairro Fake,
+        clodowaldo@dominio.com.br, Estágio na área com crescimento profissional e academico, Experiência em suporte de
+        TI, Empresa XYZ, 2019 até 2020, Técnico em TI na Instituição XYZ 2023 até 2025, Proatividade, criatividade e
+        paciência</p>
+
+    <div class="mx-auto p2">
+        <h4 class="pt-3 text_center">Resultado</h4>
+        <ul class="list-group" >
+            <li class="list-group-item list-group-item-dark">Nome: Clodowaldo Oswaldo Nelson</li>
+            <li class="list-group-item list-group-item-dark">Telefone: (11) 912345678</li>
+            <li class="list-group-item list-group-item-dark">Endereço: Rua Imaginária 102, Bairro Fake</li>
+            <li class="list-group-item list-group-item-dark">Email: clodowaldo@dominio.com.br</li>
+            <li class="list-group-item list-group-item-dark">Objetivo: Estagiar na área de TI para crescimento profissional e academico, e também praticar as
+                habilidades adquiridas</li>
+            <li class="list-group-item list-group-item-dark">Experiência: Empresa XYZ: Suporte de TI (2019-2020)</li>
+            <li class="list-group-item list-group-item-dark">Educação: Instiuição XYZ: Técnico em TI (2023-2025)</li>
+            <li class="list-group-item list-group-item-dark">Competências: Sou uma pessoa Proativa, criativa e paciente</li>
+        </ul>
+    </div>
+
+    <form action="/" method="post" class="px-5 mx-5 py-5">
+        <div class="mx-auto p-2" style="width: 65%;">
+            <div>
+                <label for="labelnome" class="form-label pt-2">Nome</label>
+                <input type="text" name="nome" class="form-control" id="nome">
+            </div>
+            <div>
+                <label for="labeltelefone" class="form-label pt-2">Telefone</label>
+                <input type="text" name="telefone" class="form-control" id="telefone">
+            </div>
+            <div>
+                <label for="labelendereco" class="form-label pt-2">Endereço</label>
+                <input type="text" name="endereco" class="form-control" id="endereco">
+            </div>
+            <div>
+                <label for="labelemail" class="form-label pt-2">Email</label>
+                <input type="text" name="email" class="form-control" id="email">
+            </div>
+            <div>
+                <label for="labelobjetivo" class="form-label pt-2">Objetivo</label>
+                <input type="text" name="objetivo" class="form-control" id="objetivo">
+            </div>
+            <div>
+                <label for="labelexp" class="form-label pt-2">Experiência</label>
+                <input type="text" name="exp" class="form-control" id="exp">
+            </div>
+            <div>
+                <label for="labeleducacao" class="form-label pt-2">Educação</label>
+                <input type="text" name="educacao" class="form-control" id="educacao">
+            </div>
+            <div>
+                <label for="labelcomp" class="form-label pt-2">Competências</label>
+                <input type="text" name="comp" class="form-control" id="comp">
+                            <button class="btn btn-success my-4 text-white" id="btngerar">Gerar Curriculo</button>
+            </div>
+        </div>
+    </form>
+    <h2 class="pt-3 text-center">Resultado</h2>
+    <div class="mx-auto p-2">
+        <ul class="list-group">
+            {{#each response}}
+            <li class="list-group-item list-group-item-dark">{{this}}</li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
